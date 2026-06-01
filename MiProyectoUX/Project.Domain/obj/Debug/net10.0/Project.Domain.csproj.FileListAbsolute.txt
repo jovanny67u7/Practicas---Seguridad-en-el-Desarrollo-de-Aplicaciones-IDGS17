@@ -1,0 +1,11 @@
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\bin\Debug\net10.0\Project.Domain.deps.json
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\bin\Debug\net10.0\Project.Domain.dll
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\bin\Debug\net10.0\Project.Domain.pdb
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\Project.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\Project.Domain.AssemblyInfoInputs.cache
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\Project.Domain.AssemblyInfo.cs
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\Project.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\Project.Domain.dll
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\refint\Project.Domain.dll
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\Project.Domain.pdb
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\MiProyectoUX\Project.Domain\obj\Debug\net10.0\ref\Project.Domain.dll
