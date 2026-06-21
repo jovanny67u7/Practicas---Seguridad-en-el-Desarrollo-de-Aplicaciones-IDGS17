@@ -223,3 +223,4 @@ C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\obj\Debug\net10.0\ref
 C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\obj\Debug\net10.0\VulnerableApp.pdb
 C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\obj\Debug\net10.0\VulnerableApp.genruntimeconfig.cache
 C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\obj\Debug\net10.0\ref\VulnerableApp.dll
+C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\bin\Debug\net10.0\BCrypt-Net-Next.dll

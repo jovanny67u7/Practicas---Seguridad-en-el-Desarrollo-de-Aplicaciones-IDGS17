@@ -12,33 +12,21 @@ namespace VulnerableApp.Controllers
         {
             _db = db;
         }
-
-        public IActionResult Login() => View();
-
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
-            if (username == "admin" && password == "admin")
+            var user = _db.Users.FirstOrDefault(u => u.Username == username);
+
+            if (user == null || !user.PasswordHash.StartsWith("$") || !BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
             {
-                HttpContext.Session.SetString("User", username);
-                HttpContext.Session.SetInt32("UserId", 1);
-                return RedirectToAction("Dashboard");
+                ViewBag.Error = "Credenciales inválidas";
+                return View();
             }
 
-            string query = "SELECT * FROM Users WHERE Username = '" + username + "' AND Password = '" + password + "'";
-            var user = _db.Users.FromSqlRaw(query).FirstOrDefault();
-
-            if (user != null)
-            {
-                HttpContext.Session.SetString("User", user.Username);
-                HttpContext.Session.SetInt32("UserId", user.Id);
-                return RedirectToAction("Dashboard");
-            }
-
-            ViewBag.Error = "Usuario/contraseña inválido";
-            return View();
+            HttpContext.Session.SetString("User", user.Username);
+            HttpContext.Session.SetInt32("UserId", user.Id);
+            return RedirectToAction("Dashboard");
         }
-
         public IActionResult Dashboard()
         {
             var userId = HttpContext.Session.GetInt32("UserId");
