@@ -1,0 +1,34 @@
+2026-07-02 21:13:47.657 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-02 21:13:47.933 -06:00 [INF] Now listening on: http://localhost:5282
+2026-07-02 21:13:47.937 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 21:13:47.938 -06:00 [INF] Hosting environment: Development
+2026-07-02 21:13:47.939 -06:00 [INF] Content root path: C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp
+2026-07-02 21:13:48.438 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 378
+2026-07-02 21:13:48.455 -06:00 [WRN] Failed to determine the https port for redirect.
+2026-07-02 21:13:48.497 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 60.3518ms
+2026-07-02 21:13:48.512 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:13:51.483 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 3351
+2026-07-02 21:13:51.491 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 8.4473ms
+2026-07-02 21:13:51.502 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:14:01.505 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 5225
+2026-07-02 21:14:01.589 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 83.1066ms
+2026-07-02 21:14:01.599 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:14:21.599 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 7100
+2026-07-02 21:14:21.604 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 4.4407ms
+2026-07-02 21:14:21.616 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:15:01.621 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 8974
+2026-07-02 21:15:01.633 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 11.4406ms
+2026-07-02 21:15:01.647 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:16:01.667 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 10849
+2026-07-02 21:16:01.681 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 15.0569ms
+2026-07-02 21:16:01.686 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:17:01.704 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 12725
+2026-07-02 21:17:01.713 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 7.703ms
+2026-07-02 21:17:01.742 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:18:01.725 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 14599
+2026-07-02 21:18:01.731 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 5.3895ms
+2026-07-02 21:18:01.762 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:19:01.790 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 16474
+2026-07-02 21:19:01.801 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 11.6304ms
+2026-07-02 21:19:01.804 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-07-02 21:19:33.977 -06:00 [INF] Application is shutting down...

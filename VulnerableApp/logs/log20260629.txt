@@ -1,0 +1,128 @@
+2026-06-29 19:53:08.163 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 19:53:08.314 -06:00 [INF] Now listening on: http://localhost:5282
+2026-06-29 19:53:08.317 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 19:53:08.318 -06:00 [INF] Hosting environment: Development
+2026-06-29 19:53:08.319 -06:00 [INF] Content root path: C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp
+2026-06-29 19:53:48.935 -06:00 [INF] Application is shutting down...
+2026-06-29 19:53:55.363 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 19:53:55.475 -06:00 [INF] Now listening on: http://localhost:5282
+2026-06-29 19:53:55.478 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 19:53:55.479 -06:00 [INF] Hosting environment: Development
+2026-06-29 19:53:55.480 -06:00 [INF] Content root path: C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp
+2026-06-29 19:53:56.010 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 378
+2026-06-29 19:53:56.024 -06:00 [WRN] Failed to determine the https port for redirect.
+2026-06-29 19:53:56.072 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 64.1148ms
+2026-06-29 19:53:56.080 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:53:59.234 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 3351
+2026-06-29 19:53:59.239 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 5.2835ms
+2026-06-29 19:53:59.244 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:54:09.293 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 5225
+2026-06-29 19:54:09.347 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 58.091ms
+2026-06-29 19:54:09.357 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:54:10.850 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Auth/Login - null null
+2026-06-29 19:54:10.900 -06:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:54:10.907 -06:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:54:10.920 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Auth/Login - 405 0 null 69.3648ms
+2026-06-29 19:54:29.352 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 9123
+2026-06-29 19:54:29.355 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 3.3191ms
+2026-06-29 19:54:29.360 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:55:04.654 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Auth/Login - null null
+2026-06-29 19:55:04.662 -06:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:55:04.665 -06:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:55:04.672 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Auth/Login - 405 0 null 18.3278ms
+2026-06-29 19:55:07.095 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-06-29 19:55:07.123 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-06-29 19:55:07.326 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-06-29 19:55:07.420 -06:00 [INF] Executing ViewResult, running view Index.
+2026-06-29 19:55:07.839 -06:00 [INF] Executed ViewResult - view Index executed in 428.6115ms.
+2026-06-29 19:55:07.844 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 494.7095ms
+2026-06-29 19:55:07.846 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-06-29 19:55:07.848 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/lib/jquery/dist/jquery.min.js - null null
+2026-06-29 19:55:07.849 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - null null
+2026-06-29 19:55:07.849 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-06-29 19:55:07.849 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/VulnerableApp.styles.css?v=pGi5QHI7edwYw-oFSAhNLpFbjP5kWh034lowgBP76Dk - null null
+2026-06-29 19:55:07.851 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-06-29 19:55:07.934 -06:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\css\site.css'
+2026-06-29 19:55:07.934 -06:00 [INF] Sending file. Request path: '/VulnerableApp.styles.css'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\obj\Debug\net10.0\scopedcss\bundle\VulnerableApp.styles.css'
+2026-06-29 19:55:07.936 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 840.7712ms
+2026-06-29 19:55:07.943 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - 200 667 text/css 93.9909ms
+2026-06-29 19:55:07.943 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/VulnerableApp.styles.css?v=pGi5QHI7edwYw-oFSAhNLpFbjP5kWh034lowgBP76Dk - 200 1109 text/css 93.4837ms
+2026-06-29 19:55:07.960 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-06-29 19:55:07.978 -06:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\js\site.js'
+2026-06-29 19:55:07.985 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2026-06-29 19:55:07.985 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 25.4216ms
+2026-06-29 19:55:07.989 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/css/bootstrap.min.css - 200 232803 text/css 142.9339ms
+2026-06-29 19:55:08.156 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2026-06-29 19:55:08.165 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80721 text/javascript 315.9892ms
+2026-06-29 19:55:08.197 -06:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\lib\jquery\dist\jquery.min.js'
+2026-06-29 19:55:08.202 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/lib/jquery/dist/jquery.min.js - 200 87533 text/javascript 353.6921ms
+2026-06-29 19:55:08.218 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/favicon.ico - null null
+2026-06-29 19:55:08.243 -06:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\favicon.ico'
+2026-06-29 19:55:08.247 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/favicon.ico - 200 5430 image/x-icon 28.4531ms
+2026-06-29 19:55:09.369 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 30847
+2026-06-29 19:55:09.405 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 35.3848ms
+2026-06-29 19:55:09.426 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:55:11.482 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-06-29 19:55:11.494 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-06-29 19:55:11.497 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-06-29 19:55:11.507 -06:00 [INF] Executing ViewResult, running view Index.
+2026-06-29 19:55:11.517 -06:00 [INF] Executed ViewResult - view Index executed in 10.4276ms.
+2026-06-29 19:55:11.522 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 16.7365ms
+2026-06-29 19:55:11.526 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-06-29 19:55:11.530 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 47.9318ms
+2026-06-29 19:55:12.419 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-06-29 19:55:12.420 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-06-29 19:55:12.425 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-06-29 19:55:12.431 -06:00 [INF] Executing ViewResult, running view Index.
+2026-06-29 19:55:12.435 -06:00 [INF] Executed ViewResult - view Index executed in 4.0225ms.
+2026-06-29 19:55:12.440 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 9.3311ms
+2026-06-29 19:55:12.443 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-06-29 19:55:12.446 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 27.8304ms
+2026-06-29 19:55:19.066 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Auth/Login - null null
+2026-06-29 19:55:19.070 -06:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:55:19.072 -06:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:55:19.075 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Auth/Login - 405 0 null 9.2132ms
+2026-06-29 19:55:25.809 -06:00 [INF] Application is shutting down...
+2026-06-29 19:55:35.563 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-29 19:55:35.675 -06:00 [INF] Now listening on: http://localhost:5282
+2026-06-29 19:55:35.679 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-29 19:55:35.680 -06:00 [INF] Hosting environment: Development
+2026-06-29 19:55:35.682 -06:00 [INF] Content root path: C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp
+2026-06-29 19:55:35.715 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 378
+2026-06-29 19:55:35.726 -06:00 [WRN] Failed to determine the https port for redirect.
+2026-06-29 19:55:35.758 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 43.9201ms
+2026-06-29 19:55:35.763 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:55:39.080 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Auth/Login - null null
+2026-06-29 19:55:39.095 -06:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:55:39.101 -06:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:55:39.108 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Auth/Login - 405 0 null 28.2763ms
+2026-06-29 19:55:39.468 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 5375
+2026-06-29 19:55:39.479 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 10.4759ms
+2026-06-29 19:55:39.490 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:55:49.492 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 7250
+2026-06-29 19:55:49.494 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 1.5482ms
+2026-06-29 19:55:49.496 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:56:09.498 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 9124
+2026-06-29 19:56:09.503 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 4.85ms
+2026-06-29 19:56:09.512 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:56:49.517 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 10996
+2026-06-29 19:56:49.523 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 5.7342ms
+2026-06-29 19:56:49.526 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:56:53.998 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Auth/Login - null null
+2026-06-29 19:56:54.026 -06:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:56:54.030 -06:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-06-29 19:56:54.036 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Auth/Login - 405 0 null 37.6825ms
+2026-06-29 19:57:02.371 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/api/user/1 - null null
+2026-06-29 19:57:02.398 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.ApiController.GetUser (VulnerableApp)'
+2026-06-29 19:57:02.596 -06:00 [INF] Route matched with {action = "GetUser", controller = "Api"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUser(Int32) on controller VulnerableApp.Controllers.ApiController (VulnerableApp).
+2026-06-29 19:57:02.983 -06:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2026-06-29 19:57:03.090 -06:00 [INF] Executed action VulnerableApp.Controllers.ApiController.GetUser (VulnerableApp) in 482.3557ms
+2026-06-29 19:57:03.110 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.ApiController.GetUser (VulnerableApp)'
+2026-06-29 19:57:03.116 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/api/user/1 - 401 null application/problem+json; charset=utf-8 744.9348ms
+2026-06-29 19:57:49.528 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 18965
+2026-06-29 19:57:49.538 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 9.1296ms
+2026-06-29 19:57:49.549 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:58:49.536 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/api/events/raw - application/vnd.serilog.clef; charset=utf-8 20840
+2026-06-29 19:58:49.547 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/api/events/raw - 404 0 null 10.8556ms
+2026-06-29 19:58:49.556 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5282/api/events/raw, Response status code: 404
+2026-06-29 19:59:34.226 -06:00 [INF] Application is shutting down...

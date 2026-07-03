@@ -1,0 +1,193 @@
+2026-07-02 21:55:50.414 -06:00 [INF] Executed DbCommand (136ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [VulnerableAppDb];
+2026-07-02 21:55:50.531 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [VulnerableAppDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2026-07-02 21:55:50.555 -06:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-02 21:55:50.563 -06:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-07-02 21:55:50.607 -06:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-07-02 21:55:50.671 -06:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-07-02 21:55:50.681 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-02 21:55:50.686 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-02 21:55:50.734 -06:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-02 21:55:50.745 -06:00 [INF] Applying migration '20260602015544_InitialCreate'.
+2026-07-02 21:55:50.776 -06:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Password] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [Balance] decimal(18,2) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2026-07-02 21:55:50.832 -06:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Balance', N'CreatedAt', N'Email', N'Password', N'Username') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] ON;
+INSERT INTO [Users] ([Id], [Balance], [CreatedAt], [Email], [Password], [Username])
+VALUES (1, 1000.0, '2024-01-01T00:00:00.0000000', N'admin@test.com', N'admin', N'admin'),
+(2, 500.0, '2024-01-01T00:00:00.0000000', N'user@test.com', N'123456', N'user1'),
+(3, 750.0, '2024-01-01T00:00:00.0000000', N'user2@test.com', N'password', N'user2');
+IF EXISTS (SELECT * FROM [sys].[identity_columns] WHERE [name] IN (N'Id', N'Balance', N'CreatedAt', N'Email', N'Password', N'Username') AND [object_id] = OBJECT_ID(N'[Users]'))
+    SET IDENTITY_INSERT [Users] OFF;
+2026-07-02 21:55:50.835 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260602015544_InitialCreate', N'10.0.8');
+2026-07-02 21:55:50.837 -06:00 [INF] Applying migration '20260621053158_ApplySecurityFixes'.
+2026-07-02 21:55:51.318 -06:00 [INF] Executed DbCommand (476ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC sp_rename N'[Users].[Password]', N'PasswordHash', 'COLUMN';
+2026-07-02 21:55:51.320 -06:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260621053158_ApplySecurityFixes', N'10.0.8');
+2026-07-02 21:55:51.337 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-07-02 21:56:06.111 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-02 21:56:06.248 -06:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5282: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+ ---> System.Net.Sockets.SocketException (10048): Solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-07-02 22:10:56.663 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-02 22:10:56.748 -06:00 [INF] Now listening on: http://localhost:5282
+2026-07-02 22:10:56.751 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 22:10:56.752 -06:00 [INF] Hosting environment: Development
+2026-07-02 22:10:56.753 -06:00 [INF] Content root path: C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp
+2026-07-02 22:11:24.242 -06:00 [INF] Application is shutting down...
+2026-07-02 22:11:41.755 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-02 22:11:41.877 -06:00 [INF] Now listening on: http://localhost:5282
+2026-07-02 22:11:41.881 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 22:11:41.884 -06:00 [INF] Hosting environment: Development
+2026-07-02 22:11:41.886 -06:00 [INF] Content root path: C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp
+2026-07-02 22:11:42.079 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-07-02 22:11:42.095 -06:00 [WRN] Failed to determine the https port for redirect.
+2026-07-02 22:11:42.125 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:11:42.166 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-07-02 22:11:42.177 -06:00 [INF] Inicio Home.Index. IP: ::1, Usuario: Anónimo
+2026-07-02 22:11:42.180 -06:00 [INF] Fin Home.Index. Tiempo de ejecución: 7ms
+2026-07-02 22:11:42.192 -06:00 [INF] Executing ViewResult, running view Index.
+2026-07-02 22:11:42.279 -06:00 [INF] Executed ViewResult - view Index executed in 88.1397ms.
+2026-07-02 22:11:42.283 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 113.3251ms
+2026-07-02 22:11:42.294 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:11:42.303 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 226.1973ms
+2026-07-02 22:11:44.957 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-07-02 22:11:44.966 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:11:44.969 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-07-02 22:11:44.975 -06:00 [INF] Inicio Home.Index. IP: ::1, Usuario: Anónimo
+2026-07-02 22:11:44.980 -06:00 [INF] Fin Home.Index. Tiempo de ejecución: 6ms
+2026-07-02 22:11:44.986 -06:00 [INF] Executing ViewResult, running view Index.
+2026-07-02 22:11:44.996 -06:00 [INF] Executed ViewResult - view Index executed in 10.1639ms.
+2026-07-02 22:11:45.000 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 26.0556ms
+2026-07-02 22:11:45.006 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:11:45.011 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 54.7231ms
+2026-07-02 22:11:45.858 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Home/Privacy - null null
+2026-07-02 22:11:45.868 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Privacy (VulnerableApp)'
+2026-07-02 22:11:45.876 -06:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-07-02 22:11:45.882 -06:00 [INF] Inicio Home.Privacy. IP: ::1, Usuario: Anónimo
+2026-07-02 22:11:45.886 -06:00 [INF] Fin Home.Privacy. Tiempo de ejecución: 4ms
+2026-07-02 22:11:45.892 -06:00 [INF] Executing ViewResult, running view Privacy.
+2026-07-02 22:11:45.909 -06:00 [INF] Executed ViewResult - view Privacy executed in 19.0279ms.
+2026-07-02 22:11:45.914 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Privacy (VulnerableApp) in 32.8264ms
+2026-07-02 22:11:45.919 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Privacy (VulnerableApp)'
+2026-07-02 22:11:45.922 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Home/Privacy - 200 null text/html; charset=utf-8 63.522ms
+2026-07-02 22:11:46.904 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-07-02 22:11:46.907 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:11:46.910 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-07-02 22:11:46.914 -06:00 [INF] Inicio Home.Index. IP: ::1, Usuario: Anónimo
+2026-07-02 22:11:46.916 -06:00 [INF] Fin Home.Index. Tiempo de ejecución: 2ms
+2026-07-02 22:11:46.918 -06:00 [INF] Executing ViewResult, running view Index.
+2026-07-02 22:11:46.921 -06:00 [INF] Executed ViewResult - view Index executed in 2.769ms.
+2026-07-02 22:11:46.922 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 9.0481ms
+2026-07-02 22:11:46.926 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:11:46.927 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 23.8257ms
+2026-07-02 22:12:03.259 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-07-02 22:12:03.268 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:12:03.272 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-07-02 22:12:03.278 -06:00 [INF] Inicio Home.Index. IP: ::1, Usuario: Anónimo
+2026-07-02 22:12:03.281 -06:00 [INF] Fin Home.Index. Tiempo de ejecución: 3ms
+2026-07-02 22:12:03.285 -06:00 [INF] Executing ViewResult, running view Index.
+2026-07-02 22:12:03.289 -06:00 [INF] Executed ViewResult - view Index executed in 3.931ms.
+2026-07-02 22:12:03.293 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 15.0447ms
+2026-07-02 22:12:03.298 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-02 22:12:03.301 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 41.9889ms
+2026-07-02 22:12:22.711 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Auth/Login - null null
+2026-07-02 22:12:22.722 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-02 22:12:22.735 -06:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller VulnerableApp.Controllers.AuthController (VulnerableApp).
+2026-07-02 22:12:23.096 -06:00 [INF] Inicio Auth.Login (GET). IP: ::1
+2026-07-02 22:12:23.104 -06:00 [INF] Fin Auth.Login (GET). Tiempo de ejecución: 7ms
+2026-07-02 22:12:23.111 -06:00 [INF] Executing ViewResult, running view Login.
+2026-07-02 22:12:23.273 -06:00 [INF] Executed ViewResult - view Login executed in 164.1574ms.
+2026-07-02 22:12:23.276 -06:00 [INF] Executed action VulnerableApp.Controllers.AuthController.Login (VulnerableApp) in 536.0169ms
+2026-07-02 22:12:23.280 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-02 22:12:23.286 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Auth/Login - 200 null text/html; charset=utf-8 574.7693ms
+2026-07-02 22:12:31.235 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/Auth/Login - application/x-www-form-urlencoded 215
+2026-07-02 22:12:31.241 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-02 22:12:31.293 -06:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String, System.String) on controller VulnerableApp.Controllers.AuthController (VulnerableApp).
+2026-07-02 22:12:31.378 -06:00 [INF] Inicio Auth.Login (POST). IP: ::1, Usuario intentando ingresar: admin
+2026-07-02 22:12:34.493 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@username='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @username
+2026-07-02 22:12:34.617 -06:00 [WRN] Evento de Autenticación Fallido: Credenciales inválidas para admin desde la IP ::1
+2026-07-02 22:12:34.621 -06:00 [INF] Fin Auth.Login (POST). Tiempo de ejecución: 3243ms
+2026-07-02 22:12:34.622 -06:00 [INF] Executing ViewResult, running view Login.
+2026-07-02 22:12:34.627 -06:00 [INF] Executed ViewResult - view Login executed in 4.6378ms.
+2026-07-02 22:12:34.643 -06:00 [INF] Executed action VulnerableApp.Controllers.AuthController.Login (VulnerableApp) in 3344.8675ms
+2026-07-02 22:12:34.650 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-02 22:12:34.675 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/Auth/Login - 200 null text/html; charset=utf-8 3439.4493ms
+2026-07-02 22:12:44.734 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/Auth/Login - application/x-www-form-urlencoded 210
+2026-07-02 22:12:44.749 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-02 22:12:44.752 -06:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String, System.String) on controller VulnerableApp.Controllers.AuthController (VulnerableApp).
+2026-07-02 22:12:44.780 -06:00 [INF] Inicio Auth.Login (POST). IP: ::1, Usuario intentando ingresar: admin
+2026-07-02 22:12:44.839 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[@username='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @username
+2026-07-02 22:12:44.844 -06:00 [WRN] Evento de Autenticación Fallido: Credenciales inválidas para admin desde la IP ::1
+2026-07-02 22:12:44.847 -06:00 [INF] Fin Auth.Login (POST). Tiempo de ejecución: 67ms
+2026-07-02 22:12:44.852 -06:00 [INF] Executing ViewResult, running view Login.
+2026-07-02 22:12:44.860 -06:00 [INF] Executed ViewResult - view Login executed in 8.1956ms.
+2026-07-02 22:12:44.866 -06:00 [INF] Executed action VulnerableApp.Controllers.AuthController.Login (VulnerableApp) in 107.438ms
+2026-07-02 22:12:44.870 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-02 22:12:44.873 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/Auth/Login - 200 null text/html; charset=utf-8 139.0068ms
+2026-07-02 22:17:03.481 -06:00 [INF] Application is shutting down...
