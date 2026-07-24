@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build *)",
+      "Bash(sqlcmd -S \"\\(localdb\\)\\\\mssqllocaldb\" -d VulnerableAppDb -Q \"SELECT Id, Username, PasswordHash, Email FROM Users\" -C)",
+      "Bash(mkdir -p /c/Users/jovan/AppData/Local/Temp/claude/c--Users-jovan-Downloads-PRACTICAS-SEGURIDAD/4b852cdb-cac4-43b8-ba19-002bc8bdd00a/scratchpad/hashgen)",
+      "Read(//c/Users/jovan/AppData/Local/Temp/claude/c--Users-jovan-Downloads-PRACTICAS-SEGURIDAD/4b852cdb-cac4-43b8-ba19-002bc8bdd00a/scratchpad/**)",
+      "Bash(dotnet new *)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5282/ --max-time 3)",
+      "Bash(echo \"started with pid $!\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5282/ --max-time 5)",
+      "Read(//c/Users/jovan/AppData/Local/Temp/claude/c--Users-jovan-Downloads-PRACTICAS-SEGURIDAD/4b852cdb-cac4-43b8-ba19-002bc8bdd00a/scratchpad/hashgen/**)",
+      "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"c:\\\\Users\\\\jovan\\\\Downloads\\\\PRACTICAS-SEGURIDAD\\\\TrafficGenerator.ps1\")",
+      "Bash(git add *)"
+    ]
+  }
+}

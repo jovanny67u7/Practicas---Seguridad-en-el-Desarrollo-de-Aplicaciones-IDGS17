@@ -1,0 +1,62 @@
+2026-07-06 19:30:15.144 -06:00 [INF] User profile is available. Using 'C:\Users\jovan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-06 19:30:15.384 -06:00 [INF] Now listening on: http://localhost:5282
+2026-07-06 19:30:15.389 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-06 19:30:15.392 -06:00 [INF] Hosting environment: Development
+2026-07-06 19:30:15.395 -06:00 [INF] Content root path: C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp
+2026-07-06 19:30:31.915 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/ - null null
+2026-07-06 19:30:32.012 -06:00 [WRN] Failed to determine the https port for redirect.
+2026-07-06 19:30:32.158 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-06 19:30:32.434 -06:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller VulnerableApp.Controllers.HomeController (VulnerableApp).
+2026-07-06 19:30:32.815 -06:00 [INF] Inicio Home.Index. IP: ::1, Usuario: Anónimo
+2026-07-06 19:30:32.933 -06:00 [INF] Fin Home.Index. Tiempo de ejecución: 156ms
+2026-07-06 19:30:33.337 -06:00 [INF] Executing ViewResult, running view Index.
+2026-07-06 19:30:34.632 -06:00 [INF] Executed ViewResult - view Index executed in 1265.6852ms.
+2026-07-06 19:30:34.754 -06:00 [INF] Executed action VulnerableApp.Controllers.HomeController.Index (VulnerableApp) in 2081.6427ms
+2026-07-06 19:30:34.983 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 19:30:34.983 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/VulnerableApp.styles.css?v=pGi5QHI7edwYw-oFSAhNLpFbjP5kWh034lowgBP76Dk - null null
+2026-07-06 19:30:34.984 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.HomeController.Index (VulnerableApp)'
+2026-07-06 19:30:34.979 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - null null
+2026-07-06 19:30:35.131 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 19:30:35.190 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 19:30:37.272 -06:00 [INF] Sending file. Request path: '/VulnerableApp.styles.css'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\obj\Debug\net10.0\scopedcss\bundle\VulnerableApp.styles.css'
+2026-07-06 19:30:37.727 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/ - 200 null text/html; charset=utf-8 5815.3961ms
+2026-07-06 19:30:39.136 -06:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\css\site.css'
+2026-07-06 19:30:39.396 -06:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\lib\jquery\dist\jquery.min.js'
+2026-07-06 19:30:40.630 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2026-07-06 19:30:41.712 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/VulnerableApp.styles.css?v=pGi5QHI7edwYw-oFSAhNLpFbjP5kWh034lowgBP76Dk - 200 1109 text/css 6734.4086ms
+2026-07-06 19:30:42.116 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - 200 667 text/css 7141.2555ms
+2026-07-06 19:30:42.147 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/lib/jquery/dist/jquery.min.js - 200 87533 text/javascript 7163.1994ms
+2026-07-06 19:30:42.156 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2026-07-06 19:30:42.279 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/css/bootstrap.min.css - 200 232803 text/css 7147.904ms
+2026-07-06 19:30:43.184 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 19:30:44.124 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80721 text/javascript 8933.2524ms
+2026-07-06 19:30:44.165 -06:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\js\site.js'
+2026-07-06 19:30:44.196 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 231 text/javascript 1011.8448ms
+2026-07-06 19:30:44.324 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/favicon.ico - null null
+2026-07-06 19:30:44.377 -06:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\jovan\Downloads\PRACTICAS-SEGURIDAD\VulnerableApp\wwwroot\favicon.ico'
+2026-07-06 19:30:44.389 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/favicon.ico - 200 5430 image/x-icon 64.0233ms
+2026-07-06 19:30:46.361 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:5282/Auth/Login - null null
+2026-07-06 19:30:46.439 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-06 19:30:46.553 -06:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller VulnerableApp.Controllers.AuthController (VulnerableApp).
+2026-07-06 19:30:48.283 -06:00 [INF] Inicio Auth.Login (GET). IP: ::1
+2026-07-06 19:30:48.289 -06:00 [INF] Fin Auth.Login (GET). Tiempo de ejecución: 7ms
+2026-07-06 19:30:48.303 -06:00 [INF] Executing ViewResult, running view Login.
+2026-07-06 19:30:49.352 -06:00 [INF] Executed ViewResult - view Login executed in 1052.5723ms.
+2026-07-06 19:30:49.881 -06:00 [INF] Executed action VulnerableApp.Controllers.AuthController.Login (VulnerableApp) in 2924.261ms
+2026-07-06 19:30:49.888 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-06 19:30:50.009 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:5282/Auth/Login - 200 null text/html; charset=utf-8 3648.5054ms
+2026-07-06 19:30:57.978 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:5282/Auth/Login - application/x-www-form-urlencoded 210
+2026-07-06 19:30:58.022 -06:00 [INF] Executing endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-06 19:30:58.062 -06:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(System.String, System.String) on controller VulnerableApp.Controllers.AuthController (VulnerableApp).
+2026-07-06 19:30:59.065 -06:00 [INF] Inicio Auth.Login (POST). IP: ::1, Usuario intentando ingresar: admin
+2026-07-06 19:31:06.247 -06:00 [INF] Executed DbCommand (149ms) [Parameters=[@username='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Balance], [u].[CreatedAt], [u].[Email], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @username
+2026-07-06 19:31:06.991 -06:00 [WRN] Evento de Autenticación Fallido: Credenciales inválidas para admin desde la IP ::1
+2026-07-06 19:31:06.998 -06:00 [INF] Fin Auth.Login (POST). Tiempo de ejecución: 7932ms
+2026-07-06 19:31:07.004 -06:00 [INF] Executing ViewResult, running view Login.
+2026-07-06 19:31:07.108 -06:00 [INF] Executed ViewResult - view Login executed in 103.3499ms.
+2026-07-06 19:31:07.446 -06:00 [INF] Executed action VulnerableApp.Controllers.AuthController.Login (VulnerableApp) in 9372.4155ms
+2026-07-06 19:31:07.465 -06:00 [INF] Executed endpoint 'VulnerableApp.Controllers.AuthController.Login (VulnerableApp)'
+2026-07-06 19:31:07.610 -06:00 [INF] Request finished HTTP/1.1 POST http://localhost:5282/Auth/Login - 200 null text/html; charset=utf-8 9632.3967ms
